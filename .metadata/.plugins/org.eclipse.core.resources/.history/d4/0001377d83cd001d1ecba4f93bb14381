@@ -1,0 +1,23 @@
+package com.prog.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import com.prog.entity.User;
+import com.prog.repository.UserRepo;
+
+@Service
+@Component
+public class UserService {
+	
+	@Autowired
+	private UserRepo repo;
+	
+	
+	public void addEmp(User u) {
+		repo.save(u);
+	}
+	
+
+}

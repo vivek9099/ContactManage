@@ -1,0 +1,45 @@
+package com.app.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.app.model.User;
+
+
+
+@RestController
+public class UserController {
+	
+	
+	
+	//http://localhost:8080/user
+	@GetMapping("/user")
+	public User getUser() {
+		return new User (1,"Vivek","Mishra","viv@gmail.com","9849788973");
+	}
+	
+	@GetMapping("/users")
+	public List<User> getUsers(){
+		List<User> users = new ArrayList<>();
+		users.add(new User(1,"Vivek","Mishra","viv@gmail.com","9849788973"));
+		users.add(new User(2,"Chiku","Kumar","khiku@gmail.com","9819862014"));
+		users.add(new User(3,"Manjan","Singh","manjan@gmail.com","9815952100"));
+		users.add(new User(4,"Lucky","Pathan","lucky@gmail.com","9844224469"));
+		users.add(new User(5,"Ram","Charan","viv@gmail.com","9849788973"));
+		return users;
+	}
+	
+	//http://localhost:8080/users/vivek/mishra
+	//@PathVarible annotation
+	
+	@GetMapping("/users/{firstname}/{lastname}")
+	public User userPathVariable(@PathVariable("firstname") String firstname,
+	         @PathVariable("lastname") String lastname){
+	        	 return new User();
+	         }
+
+}

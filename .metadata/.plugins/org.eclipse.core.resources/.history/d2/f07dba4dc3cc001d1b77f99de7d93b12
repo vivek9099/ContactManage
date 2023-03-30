@@ -1,0 +1,5 @@
+package com.smart.contactmanager.model;
+
+public class User {
+
+}

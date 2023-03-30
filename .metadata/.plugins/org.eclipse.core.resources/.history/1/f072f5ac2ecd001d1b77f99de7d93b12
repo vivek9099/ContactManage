@@ -1,0 +1,5 @@
+package com.smart.contactmanager.dao;
+
+public interface UserRepository {
+
+}

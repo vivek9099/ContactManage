@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\java\JavBasics@023\contact-manager\contact-manager"/>
+			<item value="C:\Users\Vivek Mishra\Downloads\contact-manager\contact-manager"/>
+			<item value="C:\Users\Vivek Mishra\OneDrive\Documents\smart-contact-manager-main\smart-contact-manager-main\smart_contact_manager"/>
+			<item value="D:\movies\2022\smartcontact\smartcontact"/>
+			<item value="D:\movies\2022\2023\contactmanager\contactmanager"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

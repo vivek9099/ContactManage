@@ -1,0 +1,56 @@
+package com.prog.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.prog.entity.User;
+import com.prog.service.UserService;
+
+import jakarta.servlet.http.HttpSession;
+
+
+
+@Controller
+public class UserController {
+	
+	@Autowired
+	private UserService service;;
+	
+	@GetMapping("/")
+	public String home(Model m) {
+		return findPaginated(0,m);
+		
+	}
+	
+	@GetMapping("/addemp")
+	public String addEmpForm() {
+		return "addemp";
+	}
+	
+	@PostMapping("/register")
+	public String contactRegister(@ModelAttribute User u) {
+		System.out.println(u);
+		service.addEmp(u);
+		
+		
+		return "redirect:/";
+		
+	}
+	@GetMapping("/edit/{id}")
+	public String edit(@PathVariable int id, Model m) {
+		User u = service.getUserById(id);
+		m.addAttribute("User", u);
+		return "edit";
+	}
+	public String findPaginated(int i, Model m) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

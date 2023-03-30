@@ -1,0 +1,12 @@
+package com.prog.controller;
+
+@Controller
+public class UserController {
+	
+	@GetMapping("/")
+	public String home() {
+		return "index";
+		
+	}
+
+}

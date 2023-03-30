@@ -1,0 +1,18 @@
+package com.prog.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.prog.entity.User;
+import com.prog.repository.UserRepo;
+
+public class UserService {
+	
+	@Autowired
+	private UserRepo repo;
+	
+	
+	public void addEmp(User u) {
+		repo.save(u);
+	}
+
+}

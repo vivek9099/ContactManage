@@ -1,0 +1,39 @@
+package com.prog.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.prog.entity.User;
+import com.prog.service.UserService;
+
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+public class UserController {
+	
+	
+	private UserService service;;
+	
+	@GetMapping("/")
+	public String home() {
+		return "index";
+		
+	}
+	@GetMapping("/addemp")
+	public String addEmpForm() {
+		return "addemp";
+	}
+	
+	@PostMapping("/register")
+	public String contactRegister(@ModelAttribute User u) {
+		System.out.println(u);
+		service.addEmp(u);
+		
+		return "redirct:/";
+		
+	}
+
+}

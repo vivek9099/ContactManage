@@ -1,0 +1,29 @@
+package com.app.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.app.model.Contact;
+import com.app.repository.ContactRepository;
+import com.app.service.ContactService;
+
+@Service
+public class ContactServiceImpl implements ContactService{
+	
+	private ContactRepository contactRepository;
+	
+	
+	
+	public ContactServiceImpl(ContactRepository contactRepository) {
+		super();
+		this.contactRepository = contactRepository;
+	}
+
+	
+
+	@Override
+	public Contact saveContact(Contact contact) {
+		// TODO Auto-generated method stub
+		return contactRepository.save(contact);
+	}
+
+}

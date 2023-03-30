@@ -1,0 +1,87 @@
+package com.smart.contactmanager.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="CONTACT")
+public class Contact {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int cId;
+	
+	private String fName;
+	private String lName;
+	private String email;
+	private String phoneNo;
+	
+	@ManyToOne
+	private User user;
+	
+	public Contact() {
+		
+	}
+
+	public int getcId() {
+		return cId;
+	}
+
+	public void setcId(int cId) {
+		this.cId = cId;
+	}
+
+	public String getfName() {
+		return fName;
+	}
+
+	public void setfName(String fName) {
+		this.fName = fName;
+	}
+
+	public String getlName() {
+		return lName;
+	}
+
+	public void setlName(String lName) {
+		this.lName = lName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhoneNo() {
+		return phoneNo;
+	}
+
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return this.cId == ((Contact)obj).getcId();
+	}
+	
+	
+	
+	
+
+}
