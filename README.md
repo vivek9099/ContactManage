@@ -33,7 +33,7 @@ mvn spring-boot:run
 The API will be available at:
 sh
 Copy code
-http://localhost:8080/api/v1/
+http://localhost:8080/api/contacts/
 Endpoints
 The API provides the following endpoints for managing contacts:
 
@@ -65,7 +65,7 @@ Copy code
 Read all contacts
 http
 Copy code
-GET /api/v1/contacts
+GET /api/contacts
 Response:
 
 json
@@ -89,7 +89,7 @@ Copy code
 Read a contact by id
 http
 Copy code
-GET /api/v1/contacts/{id}
+GET /api/contacts/{id}
 Response:
 
 json
@@ -104,7 +104,7 @@ Copy code
 Update a contact
 http
 Copy code
-PUT /api/v1/contacts/{id}
+PUT /api/contacts/{id}
 Request Body:
 
 json
@@ -129,7 +129,7 @@ Copy code
 Delete a contact
 http
 Copy code
-DELETE /api/v1/contacts/{id}
+DELETE /api/contacts/{id}
 Response:
 
 http
@@ -138,7 +138,7 @@ Copy code
 Search contacts
 http
 Copy code
-GET /api/v1/contacts/search?firstName=John&lastName=Doe&email=john.doe@example.com
+GET /api/contacts/search?firstName=John&lastName=Doe&email=john.doe@example.com
 Response:
 
 json
