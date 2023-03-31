@@ -6,11 +6,11 @@ The API also allows searching for contacts based on their first name, last name,
 The API is secure and requires authentication for accessing the endpoints.
 
 Technologies Used
-Spring Boot
-Spring Security
-Spring Data JPA
-H2 Database
-Maven
+1-Spring Boot
+2-Spring Security
+3-Spring Data JPA
+4-H2 Database
+5-Maven
 OpenAPI
 Getting Started
 To get started with the API, follow these steps:
@@ -31,16 +31,17 @@ sh
 Copy code
 mvn spring-boot:run
 The API will be available at:
-sh
-Copy code
+
 http://localhost:8080/api/contacts/
+
+
+
 Endpoints
 The API provides the following endpoints for managing contacts:
 
 Create a contact
 http
-Copy code
-POST /api/v1/contacts
+POST /api/contacts
 Request Body:
 
 json
@@ -62,14 +63,17 @@ Copy code
   "email": "john.doe@example.com",
   "phoneNumber": "+1-202-555-0123"
 }
+
+
+
+
+
 Read all contacts
 http
-Copy code
-GET /api/contacts
+
+GET /acontacts
 Response:
 
-json
-Copy code
 [
   {
     "id": 1,
@@ -86,10 +90,17 @@ Copy code
     "phoneNumber": "+1-202-555-4567"
   }
 ]
+
+
+
+
+
+
+
+
 Read a contact by id
 http
-Copy code
-GET /api/contacts/{id}
+GET /contacts/{id}
 Response:
 
 json
@@ -101,10 +112,15 @@ Copy code
   "email": "john.doe@example.com",
   "phoneNumber": "+1-202-555-0123"
 }
+
+
+
+
+
 Update a contact
 http
-Copy code
-PUT /api/contacts/{id}
+
+PUT /contacts/{id}
 Request Body:
 
 json
@@ -126,19 +142,29 @@ Copy code
   "email": "john.doe@example.com",
   "phoneNumber": "+1-202-555-0123"
 }
+
+
+
+
+
 Delete a contact
 http
-Copy code
-DELETE /api/contacts/{id}
+
+DELETE /contacts/{id}
 Response:
 
 http
 Copy code
 204 No Content
+
+
+
+
+
 Search contacts
 http
-Copy code
-GET /api/contacts/search?firstName=John&lastName=Doe&email=john.doe@example.com
+
+GET /contacts/search?firstName=John&lastName=Doe&email=john.doe@example.com
 Response:
 
 json
